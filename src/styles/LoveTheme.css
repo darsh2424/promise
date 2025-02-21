@@ -1,0 +1,233 @@
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  /* background: linear-gradient(to bottom, #ffdde1, #ee9ca7); */
+  background-image:url("../assets/background.jpg");
+  text-align: center;
+  color: #d63384;
+  margin: 0;
+  padding: 0;
+}
+
+/* Containers */
+.qa-container,
+.media-container,
+.question-container {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+/* Cards */
+.media-container,
+.question-container {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 450px;
+  width: 90%;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  margin: auto;
+  min-height: 300px;
+}
+
+/* Headings */
+h2 {
+  font-family: "Dancing Script", cursive;
+  color: #ff4081;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  font-weight: bold;
+  background: #ff4081;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: #d63384;
+}
+
+/* Step 3 Layout */
+.step3-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 60%;
+}
+
+.gif-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teddy-hit-gif {
+  width: 250px;
+  height: auto;
+}
+
+.question-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Media Grid (Responsive 2x2 Layout) */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* Media Items */
+.media-item {
+  width: 100%;
+  /* height: 240px; Adjusted for better proportion */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.media-item img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.media-item:hover {
+  transform: scale(1.05);
+}
+
+/* Audio Styling */
+.audio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.audio-poster {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+/* Custom Audio Player */
+audio {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  background: #f8bbd0;
+}
+
+audio::-webkit-media-controls-panel {
+  background: #f8bbd0;
+  border-radius: 5px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+  background: #ff4081;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background: #ff80ab;
+  border-radius: 5px;
+}
+
+/* Loading Animation */
+.loading-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teddy-gif {
+  width: 140px;
+  height: auto;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 8px;
+  background: #ffcdd2;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.loading-fill {
+  height: 100%;
+  background: #ff4081;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .media-container,
+  .question-container {
+    padding: 15px;
+    min-height: 250px;
+  }
+
+  .teddy-gif {
+    width: 120px;
+  }
+
+  .audio-poster {
+    width: 80px;
+    height: 80px;
+  }
+
+  audio {
+    width: 90%;
+  }
+  
+}
