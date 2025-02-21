@@ -108,8 +108,8 @@ const QandAPage = () => {
           <div className="question-container">
             <QuestionForm
               question="Are you sure you still don't love me?"
-              onYes={() => startLoading(true)}
-              onNo={() => setStep(3)} // Loop until Yes is clicked
+              onYes={() => setStep(3)}
+              onNo={() => startLoading(true)} // Loop until Yes is clicked
             />
           </div>
         </div>
