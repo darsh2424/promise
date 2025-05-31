@@ -1,0 +1,114 @@
+/* Animated love background */
+.love-bg {
+  background-image: url("../assets/background.jpg");
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* Gradient movement animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Page container layout */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Cursive', sans-serif;
+}
+
+/* Media card styling */
+.media-card {
+  border-radius: 24px;
+  /* padding: 1rem; */
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+  /* gap: 1rem; */
+}
+
+/* Card appears with fade-in animation */
+.media-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating GIF containers */
+.gif-container {
+  flex: 1;
+  max-width: 120px;
+  /* padding: 1rem; */
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.gif-container img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* Center content section */
+.content-center {
+  flex: 3;
+  padding: 1rem;
+  text-align: center;
+  min-width: 250px;
+}
+
+/* Text with gentle pulse */
+.highlight-text {
+  font-size: 2rem;
+  color: #e91e63;
+  font-weight: bold;
+  /* margin-bottom: 1rem; */
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.03); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .media-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gif-container {
+    max-width: 100px;
+    padding: 0.5rem;
+  }
+
+  .highlight-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* Video iframe container */
+.video-frame {
+  border-radius: 16px;
+  /* overflow: hidden; */
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+  /* margin-top: 1rem; */
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}

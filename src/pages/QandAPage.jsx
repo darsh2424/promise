@@ -18,7 +18,7 @@ import songPoster1 from "../assets/song1.jpeg";
 import songPoster2 from "../assets/song2.jpg";
 import songPoster3 from "../assets/song3.jpg";
 import songPoster4 from "../assets/song4.jpg";
-import "../styles/LoveTheme.css"; // 🎀 Importing the CSS
+import "../styles/LoveTheme.css"; // 
 
 const QandAPage = () => {
   const { setIsLoved } = useLove();

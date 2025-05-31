@@ -4,6 +4,7 @@ import QandAPage from "./pages/QandAPage";
 import AgreementPage from "./pages/AgreementPage";
 import MarriagePage from "./pages/MarriagePage";
 import CelebrationPage from "./pages/CelebrationPage";
+import YouTubePlayerPage from "./pages/YouTubePlayerPage";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Route path="/agreement" element={<AgreementPage />} />
       <Route path="/marriage" element={<MarriagePage />} />
       <Route path="/celebration" element={<CelebrationPage />} />
+      <Route path="/player" element={<YouTubePlayerPage />} />
     </Routes>
   );
 };
